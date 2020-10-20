@@ -1,0 +1,27 @@
+{
+  "name": "chatty-matt",
+  "version": "1.0.0",
+  "description": "simple html, js, &amp; css chat app",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matt22881/chatty-matt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matt22881/chatty-matt/issues"
+  },
+  "homepage": "https://github.com/matt22881/chatty-matt#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "socket.io": "^2.3.0"
+  }
+}
