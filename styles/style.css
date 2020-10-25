@@ -1,8 +1,143 @@
-body {
-    padding: 0;
-    margin: 0;
-    background: #004c54;
-    display: flex;
-    justify-content: center;
-    align-items: center
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    background-color: darkslategray;
+}
+html {
+    font-size: 62.6%;
+}
+div {
+    font-size: 1.5rem;
+
+}
+.message {
+    border: solid 1px black;
+}
+.user {
+    background-color: green;
+    color: #000
+}
+.mdntgrn {
+    background-color: #004c54;
+    color: #fff;
+}
+.silvjer {
+    background-color: #a5acaf;
+    color: #000;
+}
+.silvhel {
+    background-color: #acc0c6;
+    color: #000;
+}
+.blk {
+    background-color: #000000;
+    color: #fff
+}
+.char {
+    background-color: #656a5c;
+    color: #fff;
+}
+.vintgrn {
+    background-color: #046a38;
+    color: #fff;
+}
+.vintsilv {
+    background-color: #8a8d85;
+    color: #000;
+}
+.vintgry {
+    background-color: #91999f;
+    color:#000;
+}
+.vintyel {
+    background-color: #ffcd00;
+    color: #000;
+}
+.vintbrn {
+    background-color: #a1561c;
+    color: #000;
+}
+.vintblk {
+    background-color: #27251f;
+    color: #fff
+}
+.input-container {
+    position: fixed;
+    /* padding: 5rem; */
+    top: 0;
+    width: 100%;
+    height: 5vh;
+}
+form {
+    background-color:darkgray;
+    padding: .5rem;
+}
+input { 
+    background-color:slategray;
+    width: 90%; 
+    margin-right: .5rem;
+    padding: .5rem;
+}
+.message-container {
+    position: relative;
+}
+.glow-on-hover {
+    width: 9%;
+    height: 4vh;
+    border: none;
+    outline: none;
+    color: #297052;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: .5rem;
+}
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: .5rem;
+}
+.glow-on-hover:active {
+    color: #000
+}
+.glow-on-hover:active:after {
+    background: transparent;
+}
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: .5rem;
+}
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
 }

@@ -1,3 +1,4 @@
 {
-    "BracketHighlighter.enableExtension": true
+    "BracketHighlighter.enableExtension": true,
+    "liveServer.settings.port": 5501
 }
