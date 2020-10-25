@@ -76,14 +76,14 @@ form {
 input { 
     background-color:slategray;
     width: 85%; 
-    margin-right: .5rem;
     padding: .5rem;
 }
 .message-container {
     position: relative;
 }
 .glow-on-hover {
-    width: 12%;
+    margin: 0 auto;
+    width: 14%;
     height: 4vh;
     min-height:2.5rem;
     border: none;

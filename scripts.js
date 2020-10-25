@@ -1,11 +1,10 @@
 const socket = io('http://localhost:5555')
-// const colors = ['mdntgrn','silvjer','silvhel','blk','char','vintgrn','vintsilv','vintgry','vintyel','vintbrn','vintblk']
 
-// const getColor = () => {
-//     const randnum = parseInt(Math.round(Math.random()*11))
-//     return colors[randnum]
-// }
-// const styles = []
+const getLocalTime = () => {
+    const d = new Date()
+    var t = d.toLocaleString()
+    return t
+}
 
 const messageContainer = document.getElementById('message-container')
 const messageForm = document.getElementById('send-form')
@@ -16,7 +15,7 @@ appendMessage(`You joined as ${name}`, 'user')
 socket.emit('new-user', name)
    
 socket.on('chat-message', (data) => {
-   appendMessage(`${data.name}: ${data.message}`, data.style) 
+    appendMessage(`${data.name}: ${data.message}`, data.style) 
 })
 
 socket.on('user-connected', (name, style) => {
@@ -36,9 +35,10 @@ messageForm.addEventListener('submit', e => {
 })
 
 function appendMessage(message, style) {
+    const t = getLocalTime()
     const messageElement = document.createElement('div')
     messageElement.classList.add(style)
     messageElement.classList.add('message')
-    messageElement.innerText = message
+    messageElement.innerText = `[${t}] ${message}`
     messageContainer.insertBefore(messageElement, messageContainer.firstChild)
 }
