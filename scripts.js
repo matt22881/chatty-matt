@@ -1,6 +1,6 @@
 // const socket = io('http://localhost:5555')
 const io = require('socket.io-client');
-const socket = io.connect('https://chatty-matt-the-matt-made-chat-app.vercel.app:5555');
+const socket = io.connect('https://chatty-matt-the-matt-made-chat-app-o7mv8ccve.vercel.app:5555');
 
 const getLocalTime = () => {
     const d = new Date()
